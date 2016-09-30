@@ -1,0 +1,38 @@
+# Learn more about services, parameters and containers at
+# http://symfony.com/doc/current/book/service_container.html
+parameters:
+#    parameter_name: value
+
+services:
+    file.utils:
+        class: AppBundle\Services\FileUtils
+        arguments: ['@logger', '@doctrine.orm.entity_manager', '%kernel.root_dir%']
+    
+    #Listener para mostrar los errores de la página
+    app.exception_listener:
+        class: AppBundle\EventListener\ExceptionListener
+        tags:
+            - { name: kernel.event_listener, event: kernel.exception }
+    
+    #Listener para crear token de seguridad al crear un album
+    my.listener:
+        class: AppBundle\EventListener\AlbumCreation
+        tags:
+            - { name: doctrine.event_listener, event: postPersist }
+    
+    #Filtro personalizado para la extension del precio
+    app.twig_extension:
+        class: AppBundle\Twig\AppExtension
+        public: false
+        calls:
+            - [setRequest, ["@request_stack"]]
+        tags:
+            - { name: twig.extension }
+    
+    # Namer
+    namer.album_zip:
+        class: AppBundle\Namer\AlbumNamer
+        tags:
+            - { name: namer }
+    
+    #Enviar un mail al usuario al crear un album

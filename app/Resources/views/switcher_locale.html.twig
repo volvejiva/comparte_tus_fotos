@@ -1,0 +1,8 @@
+<!-- Plantilla por defecto modificada por mi-->
+<p>{{ "menu.language"|trans }}</p>
+<ul class="locale_chooser">
+    {% for locale in locales %}
+        {% if current_locale == locale.locale %} class="locale_current"{% endif %}<br>
+            <a href="{{ locale.link }}" title="{{ locale.locale_current_language|capitalize }}"><img src="{{ asset('img/'~locale.locale~'.png') }}">  {{ locale.locale_current_language|capitalize }}</a>
+    {% endfor %}
+</ul>

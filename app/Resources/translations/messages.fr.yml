@@ -1,0 +1,33 @@
+wellcome:
+    title: "Bienvenue pour Partager Votre Photos"
+    description: "Partagez votre photos de vos événements avec tout le monde facilement."
+
+album:
+    creation: "Créez votre Album"
+    show:
+        name: "Nom de l'Album: "
+        email: "Mail User: "
+        photos: "Photos: "
+        create: "Créer un autre Album"
+        price: "Prix d'impression: "
+        link: "Link pour partager: "
+        images: "Images"
+
+list:
+    name: "Liste des Albums"
+
+form:
+    name: "Nom de l'Album: "
+    email: "Courrier Électronique: "
+    button: "Créer un Album"
+    zip: "Téléchargez votre fichier ZIP si vous voulez: "
+
+menu:
+    language: "Langues disponibles:"
+
+#Mensajes Flash
+toastr:
+    success:
+        album:
+            creation: "Vous avez créé un Album!"
+            zipOk: "Album décompressé correctement!"

@@ -1,0 +1,33 @@
+wellcome:
+    title: "Bienvenido a Comparte Tus Fotos"
+    description: "Comparte las fotos de tus eventos con quien quieras de forma sencilla."
+
+album:
+    creation: "Crea tu Álbum"
+    show:
+        name: "Nombre del Album: "
+        email: "Correo de usuario: "
+        photos: "Fotos: "
+        create: "Crea otro Álbum"
+        price: "Precio de impresión: "
+        link: "Link para compartir: "
+        images: "Imágenes"
+
+list:
+    name: "Listado de Álbumes"
+
+form:
+    name: "Nombre del Álbum: "
+    email: "Correo electrónico: "
+    button: "Crear Álbum"
+    zip: "Sube tu archivo ZIP si quieres: "
+
+menu:
+    language: "Idiomas disponibles:"
+
+#Mensajes Flash
+toastr:
+    success:
+        album:
+            creation: "Has creado un Álbum!"
+            zipOk: "Álbum descomprimido correctamente!"

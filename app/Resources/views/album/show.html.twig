@@ -1,0 +1,57 @@
+{% extends 'baseTemplate.html.twig' %}
+
+{% block content %}
+    <h1>Album {{ album.name }}</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>{{ "album.show.name"|trans }}</th>
+                <td>{{ album.name }}</td>
+            </tr>
+            <tr>
+                <th>{{ "album.show.email"|trans }}</th>
+                <td>{{ album.email }}</td>
+            </tr>
+            <tr>
+                <th>{{ "album.show.photos"|trans }}</th>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th>{{ "album.show.price"|trans }}</th>
+                <td>{{ 15|price }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('album_new') }}"><input type="button" value="{{ "album.show.create"|trans }}" src="{{ path('album_new') }}"></a>
+    <br><hr>
+    <p><h3>{{ "album.show.images"|trans }}</h3></p>
+    
+    {% for imagen in imagenes %}
+        <img src="{{ asset(imagen) }}" width="200px" />
+    {% endfor %}
+    
+    <div id="links">
+    
+    {% for imagen in imagenes %}
+
+    <a href="{{ asset(imagen)}}" title="Imagen">
+        <img src="{{ asset(imagen) }}" width="100px"/>
+    </a>    
+    
+    {% endfor %}    
+    
+</div>    
+    
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>  
+    
+{% endblock %}

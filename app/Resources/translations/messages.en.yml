@@ -1,0 +1,33 @@
+wellcome:
+    title: "Wellcome to Share your Photos"
+    description: "Share the pictures of your events with you want in a easy way."
+
+album:
+    creation: "Create your Album"
+    show:
+        name: "Album Name: "
+        email: "User Em@il: "
+        photos: "Photos: "
+        create: "Create another Album"
+        price: "Print price: "
+        link: "Link to share: "
+        images: "Images"
+
+list:
+    name: "List of Albums"
+
+form:
+    name: "Album name: "
+    email: "Em@ail: "
+    button: "Create Album"
+    zip: "Upload your zip pictures if you want: "
+
+menu:
+    language: "Languages available:"
+
+#Mensajes Flash
+toastr:
+    success:
+        album:
+            creation: "You have created an Album!"
+            zipOk: "Album unzipped correctly!"
